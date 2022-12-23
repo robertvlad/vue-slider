@@ -34,5 +34,11 @@ createApp({
                 }
             ]
         }
+    },
+    methods:{
+        changeSlide(index)
+        {
+            this.activeSlide = index;
+        }
     }
 }).mount("#app");
