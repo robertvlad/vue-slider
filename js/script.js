@@ -51,6 +51,15 @@ createApp({
             if(this.activeSlide < 0){
                 this.activeSlide = this.slides.length - 1;
             }
+        },
+        autoScroll()
+        {
+            setInterval(() => {
+                this.next();
+            }, 3000);
         }
-    }
+    },
+    created(){
+        this.autoScroll();
+    },
 }).mount("#app");
