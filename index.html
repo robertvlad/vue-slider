@@ -28,8 +28,8 @@
 
                     <!-- SEZIONE THUMBNAIL -->
                     <div class="thumbs">
-                        <div class="prev"></div>
-                        <div class="next"></div>
+                        <div class="prev" @click="prev"></div>
+                        <div class="next" @click="next"></div>
                         <div class="thumb" v-for="(thumb, index) in slides" :class="(activeSlide === index) ? 'active' : ''" @click="changeSlide(index)">
                             <img :src="thumb.image" :alt="thumb.title" />
                         </div>
